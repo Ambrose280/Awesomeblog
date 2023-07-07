@@ -48,7 +48,7 @@ INSTALLED_APPS = [
 TAILWIND_APP_NAME = 'theme'
 
 INTERNAL_IPS = [
-    "127.0.0.1",
+    "127.0.0.1", "https://awesome-blog.onrender.com"
 ]
 
 NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
@@ -95,7 +95,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+import dj_database_url
+DATABASES = {
+   'default': dj_database_url.parse('postgres://testdb_ka6b_user:4dKh7gRS48YSHg8Q0VxwOzljLyiuVj1x@dpg-cik1a1tgkuvjvn0iag7g-a.oregon-postgres.render.com/testdb_ka6b')
+}
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
